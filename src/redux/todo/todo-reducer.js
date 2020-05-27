@@ -12,6 +12,13 @@ const todoReducer = (state = INITIAL_STATE, action) => {
           ...state,
           Todos :  addTodoID(state.Todos , action.payload)
         };
+        case todoActionTypes.CLEAR_TODO:
+          return {
+            ...state,
+            Todos: state.Todos.filter(
+              todo => todo.id !== action.payload.id
+            )
+          };
     default:
       return state;
   }
