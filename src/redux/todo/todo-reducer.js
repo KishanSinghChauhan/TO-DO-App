@@ -1,9 +1,9 @@
 import todoActionTypes from './todo-types';
-import { addTodoID } from './todo-utils';
+import { addTodoID,toggleStatusToTodo } from './todo-utils';
 import { TODOs } from '../../shared/Todo_Data'
 
 const INITIAL_STATE = {
-  Todos: TODOs
+  Todos: TODOs,
 }
 const todoReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
@@ -18,6 +18,12 @@ const todoReducer = (state = INITIAL_STATE, action) => {
             Todos: state.Todos.filter(
               todo => todo.id !== action.payload.id
             )
+          };
+        case todoActionTypes.TOGGLE_STATUS:
+          return {
+            ...state,
+            Todos: toggleStatusToTodo(state.Todos,action.payload)
+            // status: !state.status
           };
     default:
       return state;

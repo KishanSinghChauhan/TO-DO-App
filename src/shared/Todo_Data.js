@@ -1,14 +1,17 @@
 export const TODOs = [
     {
         id:1,
-        Todo:"play"
+        Todo:"play",
+        status:true
     },
     {
         id:2,
-        Todo:"Dance"
+        Todo:"Dance",        
+        status:false
     },
     {
         id:3,
-        Todo:"Reading"
+        Todo:"Reading",
+        status:false
     }
 ]

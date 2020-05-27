@@ -27,6 +27,9 @@ class TodoInput extends Component {
         
         const { todo } =  this.state
         this.props.addTodo({ Todo:todo})
+        this.setState({
+            todo:''
+        })
     }
 
     render(){
