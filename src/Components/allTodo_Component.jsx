@@ -7,17 +7,15 @@ const AllTodo = ({todo,ClearTodo,toogleStatus}) => {
     const { Todo,status } = todo
     return(
         <div className="">
-                <div>
-                <input type="checkbox" checked={status} onClick={() => toogleStatus(todo)}/>
-                    <p>{ Todo }</p>
-                    {status ? (
-                        <span>completed</span>
-                        ) : null
-                    }
-                    <span  onClick = {() => ClearTodo(todo)} style={{cursor:'pointer'}}>
-                        &#10005;
-                    </span>
-                </div>            
+            <input type="checkbox" checked={status} onClick={() => toogleStatus(todo)}/>
+            <span>{ Todo }</span>
+            {status ? (
+                <span>completed</span>
+                ) : null
+            }
+            <span  onClick = {() => ClearTodo(todo)} style={{cursor:'pointer'}}>
+                &#10005;
+            </span>
         </div>
     )
 }

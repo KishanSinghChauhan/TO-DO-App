@@ -23,7 +23,6 @@ const todoReducer = (state = INITIAL_STATE, action) => {
           return {
             ...state,
             Todos: toggleStatusToTodo(state.Todos,action.payload)
-            // status: !state.status
           };
     default:
       return state;
