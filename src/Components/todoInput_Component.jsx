@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect } from 'react-redux';
-import {addTodo} from '../redux/todo/todo-actions'
+import {addTodo} from '../redux/todo/todo-actions';
+import './styles/todoInput_styles.scss'
 class TodoInput extends Component {
     constructor(props) {
         super(props);
@@ -32,16 +33,18 @@ class TodoInput extends Component {
        
         return (
             <>
-                <div className="row row-content">
-                    <div className="col-12" style={{marginTop:'0%'}}>
+                <div className="row row-content todo-input">
+                    <div className="col-12">
                         <form onSubmit={this.handleSubmit}>
-                            <input type="text" id="todo" name="todo"
+                            <input className="todo-in" type="text" id="todo" name="todo"
                                 placeholder=" + Add to List..."
                                 value={this.state.todo}
-                                onChange={this.handleInputChange} />
+                                onChange={this.handleInputChange} 
+                                required
+                                />
                         
-                            <button type="submit" color="success">
-                                POST
+                            <button className="form-btn" type="submit" color="success">
+                                Add
                             </button>
                         </form>
                     </div>

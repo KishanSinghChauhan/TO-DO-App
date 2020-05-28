@@ -2,7 +2,7 @@ export const TODOs = [
     {
         id:1,
         Todo:"Fix robots.txt",
-        status:true
+        status:false
     },
     {
         id:2,

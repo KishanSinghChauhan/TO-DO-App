@@ -1,0 +1,42 @@
+@import "~font-awesome/css/font-awesome.css";
+.todo-list{
+    border-bottom: 1px solid black;
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+    width: 60%;
+    position: relative;
+    color: #333333;
+    font-size: 13.5px;
+    font-weight: 100;
+    color: #AFB0B5;
+    .font-awesome-icon{
+        margin-right: 5px;
+        .fa{
+            margin-right: 2px;
+        }
+    }
+    input[type=checkbox]{
+        position: relative;
+        top: 2px;
+        
+    }
+    .todo-name{
+        margin-left: 3px;
+    }
+    .delete-option{
+        position: absolute;
+        right: 10px;
+        top:2px;
+        font-size: 11px;
+        color:#FBBDAC;
+        padding: 1px;
+        background-color: #F9F9F9;
+        font-weight: 600;
+    }
+    .status-complete{
+        position: absolute;
+        right:17%;
+        font-weight: 700;
+        font-size: 14px;
+    }
+}

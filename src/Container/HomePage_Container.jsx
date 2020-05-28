@@ -1,14 +1,16 @@
 import React from 'react';
-import AllTodo from '../Components/allTodo_Component'
+import TodoList from '../Components/TodoList_Component'
 import ToDoInput from '../Components/todoInput_Component';
 import {connect} from 'react-redux'
+import './HomePage_styles.scss'
 const HomePage = ({Todos}) => {
     return(
-        <div className="container">
+        <div className="container home-page">
+        <h1 className="home-head">My TO-DO's</h1>
             {Todos.map((todo) =>{
                 return(
                     <>
-                        <AllTodo key={todo.id} todo={todo}/>
+                        <TodoList key={todo.id} todo={todo}/>
                     </>
                 )}
             )}

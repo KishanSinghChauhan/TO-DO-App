@@ -4,6 +4,7 @@ import { store, persistor } from './redux/store';
 import { PersistGate } from 'redux-persist/integration/react';
 
 import HomePage from './Container/HomePage_Container';
+import './App.css'
 
 function App() {
   return (
